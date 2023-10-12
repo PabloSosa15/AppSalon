@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+
+.appointment {
+    list-style: none;
+    padding: 0;
+
+    li{
+        padding: 1rem;
+        border-top: 1px solid white;
+
+        p{
+            font-weight: v.$bold;
+            color: v.$blue;
+        }
+        
+        span,
+        .services {
+            font-weight: v.$regular;
+            color: white;
+        }
+    }
+}
+
+.services {
+    @extend .appointment;
+
+    .actions {
+        margin: 0;
+
+    }
+    .button,
+    .button-delete {
+        margin: 0;
+    }
+}
